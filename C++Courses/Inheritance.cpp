@@ -1,15 +1,15 @@
-#include<iostream>
+#include <iostream>
 
-using namespace std ;
+using namespace std;
 
+class Employee
+{
 
-class Employee{
-
-    public :
+public:
     int id;
     int salary = 100;
 
-    Employee(){}
+    Employee() {}
 
     Employee(int a)
     {
@@ -17,38 +17,34 @@ class Employee{
     }
 };
 
-
 class Programmer : public Employee
 {
-    public :
-    
+public:
     Programmer(int v)
     {
-        id = v ;
+        id = v;
     }
 
     int code = 199;
 
     void getdata()
     {
-        cout<<code<<endl;
+        cout << code << endl;
     }
-
 };
 
 int main()
 {
-    Employee ajay(2) , nayan(4) , krish(3);
+    Employee ajay(2), nayan(4), krish(3);
 
-    cout<<ajay.id<<endl;
-    cout<<nayan.id<<endl;
-    cout<<krish.id<<endl;
+    cout << ajay.id << endl;
+    cout << nayan.id << endl;
+    cout << krish.id << endl;
 
     Programmer a(10);
 
     a.getdata();
-    cout<<a.id<<endl;
-    
-    
-    return 0 ;
+    cout << a.id << endl;
+
+    return 0;
 }
